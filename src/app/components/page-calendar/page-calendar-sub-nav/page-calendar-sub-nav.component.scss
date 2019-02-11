@@ -1,0 +1,20 @@
+@import "./colors";
+
+.arrow {
+  margin: 0 10px;
+
+  + .arrow { margin-left: 0; }
+}
+
+.current-month {
+  position: relative; margin: 14px 0 3px;
+
+  .month {
+    position: relative; display: inline-block; margin: 10px 70px 0 0; z-index: 2;
+    font-size: 2em; font-weight: bold; color: $color-red;
+  }
+  .year {
+    position: absolute; right: -10px; z-index: 1;
+    font-size: 3.5em; color: $color-brown-lighter;
+  }
+}

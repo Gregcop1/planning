@@ -1,0 +1,29 @@
+$color-white: #fefefe;
+$color-red: #e53935;
+$color-red-light: lighten($color-red, 20%);
+$color-red-dark: darken($color-red, 20%);
+$color-red-darkest: darken($color-red, 40%);
+$color-grey: #423844;
+$color-grey-lightest: whitesmoke;
+$color-grey-lighter: lighten($color-grey, 70);
+$color-grey-light: lighten($color-grey, 50);
+$color-brown: #5d4037;
+$color-brown-lighter: lighten($color-brown, 60);
+$color-blue: #345aff;
+$color-blue-ligther: lighten($color-blue, 30);
+$color-green: #81ff71;
+
+$color-unpaid-leave: $color-red-darkest;
+$color-free-vacation: $color-red-light;
+$color-general-meeting: $color-green;
+
+
+// Material theme
+$color-main: $color-red;
+$color-error: #e5071b;
+$color-secondary: $color-brown;
+$color-text: $color-grey;
+$color-link: $color-main;
+$color-error: $color-main;
+$color-valid: #1c7e1c;
+$dark-primary-text: rgba(black, 0.87);

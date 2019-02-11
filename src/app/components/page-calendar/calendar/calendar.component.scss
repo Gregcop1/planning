@@ -1,0 +1,45 @@
+@import "./colors";
+
+:host { display: block; padding: 20px; }
+
+table {
+  margin: 0; padding: 0; width: 100%; border-collapse: collapse;
+  table-layout: fixed;
+
+  thead th { border-top: 0; }
+  thead th:first-child,
+  thead th:first-child + th { border: 0; }
+  thead th:last-child { border-right: 0; }
+
+  tbody th { background-color: $color-grey-lighter; border-color: $color-grey-lighter; }
+
+  tr { vertical-align: top; }
+  tr:last-child td { border-bottom: 0; }
+  td, th {
+    padding: 10px; border: 1px solid $color-brown-lighter;
+    font-family: "Roboto", "Helvetica Neue", sans-serif; font-size: 1.2em;
+    user-select: none;
+  }
+  th { color: $color-grey }
+  td { position: relative; height: 100px; z-index: 1; }
+  td:first-child { border-left: 0; }
+  td:last-child { border-right: 0; }
+
+  .week { width: 15px; }
+  .form { height: auto; }
+  .siblings-month { background-color: $color-grey-lightest; }
+  .day-number {
+    position: absolute; bottom: 0; right: 0;
+    font-size: 4em; font-weight: bold; line-height: 1; color: $color-grey-lighter; text-align: right;
+  }
+
+  td.selection-start,
+  td.selection-in,
+  td.selection-end,
+  td.selection-start.selection-in, td.selection-start.selection-end { border: 2px solid $color-free-vacation; }
+  td.selection-start { border-right: 0; }
+  td.selection-in { border-left: 0; border-right: 0; }
+  td.selection-end { border-left: 0; }
+
+  td:hover .day-number { color: $color-brown-lighter; }
+}

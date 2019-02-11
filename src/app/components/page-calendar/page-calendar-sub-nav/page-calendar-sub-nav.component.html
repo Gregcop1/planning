@@ -1,0 +1,14 @@
+<mat-toolbar>
+  <button mat-stroked-button (click)="gotoToday()">Aujourd'hui</button>
+  <button mat-icon-button class="arrow" (click)="gotoPreviousMonth()">
+    <mat-icon>keyboard_arrow_left</mat-icon>
+  </button>
+  <button mat-icon-button class="arrow" (click)="gotoNextMonth()">
+    <mat-icon>keyboard_arrow_right</mat-icon>
+  </button>
+  <span class="empty-space"></span>
+  <p class="current-month">
+    <span class="month">{{currentMonth|month}}</span>
+    <span class="year">{{currentMonth|year}}</span>
+  </p>
+</mat-toolbar>

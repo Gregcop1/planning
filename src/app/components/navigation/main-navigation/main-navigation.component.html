@@ -1,0 +1,13 @@
+<mat-toolbar color="primary">
+  <img src="assets/logo-tilleuls.png" height="75%" alt="" />
+
+  <ul>
+    <li *ngFor="let link of links">
+      <a
+        [routerLink]="link.url"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{exact: link.exact}"
+      >{{link.label}}</a>
+    </li>
+  </ul>
+</mat-toolbar>

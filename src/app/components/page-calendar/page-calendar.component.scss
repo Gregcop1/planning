@@ -1,0 +1,7 @@
+@import "./colors";
+
+.mat-drawer-content { overflow: hidden; }
+.mat-drawer {
+  margin: -10px 0; width: 20%; background-color: $color-grey-lighter; border: 0;
+  box-shadow: 5px 0 7px $color-grey-light inset;
+}

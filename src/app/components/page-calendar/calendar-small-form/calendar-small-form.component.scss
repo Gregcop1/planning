@@ -1,0 +1,10 @@
+@import './colors';
+
+:host { background-color: $color-free-vacation; border: 2px solid $color-free-vacation !important; }
+
+input[type="text"] {
+  display: block; border: 0; padding-top: 0; padding-bottom: 0; width: calc(100% - 30px); height: 0;
+  transition: all 200ms ease-in-out;
+
+  &.displayed { padding-top: 15px; padding-bottom: 15px; height: auto; }
+}

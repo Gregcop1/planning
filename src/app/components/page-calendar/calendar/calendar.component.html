@@ -1,0 +1,38 @@
+<table>
+  <thead>
+    <tr>
+      <th class="week"></th>
+      <th>Lundi</th>
+      <th>Mardi</th>
+      <th>Mercredi</th>
+      <th>Jeudi</th>
+      <th>Vendredi</th>
+      <th>Samedi</th>
+      <th>Dimanche</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let week of weeks;">
+      <ng-container *ngIf="isWeek(week); else elseBlock">
+        <th class="week">{{week.number}}</th>
+        <td
+          *ngFor="let currentDay of week.days"
+          [ngClass]="{
+            'siblings-month': isInSiblingMonth(currentDay.day),
+            'selection-start': isSelectionStart(currentDay.day),
+            'selection-in': isInSelection(currentDay.day),
+            'selection-end': isSelectionEnd(currentDay.day)
+          }"
+          (click)="doClick(currentDay.day)"
+          (mouseover)="doHover(currentDay.day)"
+        >
+          <span class="day-number">{{ currentDay.day|day }}</span>
+        </td>
+      </ng-container>
+      <ng-template #elseBlock>
+        <th class="week">&nbsp;</th>
+        <td app-calendar-small-form colspan="7" class="form"></td>
+      </ng-template>
+    </tr>
+  </tbody>
+</table>
