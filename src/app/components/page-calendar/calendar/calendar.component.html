@@ -17,6 +17,9 @@
         <th class="week">{{week.number}}</th>
         <td
           *ngFor="let currentDay of week.days"
+          app-calendar-day
+          class="selection-{{pendingEvent ? pendingEvent.type : ''}}"
+          [day]="currentDay"
           [ngClass]="{
             'siblings-month': isInSiblingMonth(currentDay.day),
             'selection-start': isSelectionStart(currentDay.day),
@@ -26,7 +29,6 @@
           (click)="doClick(currentDay.day)"
           (mouseover)="doHover(currentDay.day)"
         >
-          <span class="day-number">{{ currentDay.day|day }}</span>
         </td>
       </ng-container>
       <ng-template #elseBlock>

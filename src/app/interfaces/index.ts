@@ -1,1 +1,2 @@
-export * from './Days';
+export * from './Day';
+export * from './Event';

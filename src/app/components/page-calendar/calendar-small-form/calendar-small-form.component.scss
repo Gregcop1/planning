@@ -1,10 +1,17 @@
 @import './colors';
 
-:host { background-color: $color-free-vacation; border: 2px solid $color-free-vacation !important; }
+:host {
+  padding: 10px;
+
+  &.form-type-event { background: $color-event; }
+  &.form-type-unpaid-leave { background: $color-unpaid-leave; }
+  &.form-type-free-vacation { background: $color-free-vacation; }
+}
 
 input[type="text"] {
   display: block; border: 0; padding-top: 0; padding-bottom: 0; width: calc(100% - 30px); height: 0;
-  transition: all 200ms ease-in-out;
+  font-weight: bold;
+  transition: all 500ms cubic-bezier(0.18, 0.68, 0.32, 1.01);
 
   &.displayed { padding-top: 15px; padding-bottom: 15px; height: auto; }
 }

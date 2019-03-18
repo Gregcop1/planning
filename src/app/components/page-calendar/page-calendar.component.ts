@@ -8,7 +8,9 @@ import {Component, OnInit} from '@angular/core';
         <app-page-calendar-sub-nav></app-page-calendar-sub-nav>
         <app-calendar></app-calendar>
       </mat-drawer-content>
-      <mat-drawer mode="side" opened position="end"></mat-drawer>
+      <mat-drawer mode="side" opened position="end">
+        <app-calendar-sidebar></app-calendar-sidebar>
+      </mat-drawer>
     </mat-drawer-container>
   `,
   styleUrls: ['./page-calendar.component.scss'],

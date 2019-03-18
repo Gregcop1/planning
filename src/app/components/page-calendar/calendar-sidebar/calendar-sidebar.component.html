@@ -1,0 +1,27 @@
+<header>
+  <button class="btn-add" mat-flat-button color="primary" [matMenuTriggerFor]="addEvent">
+    <mat-icon class="md-48">add</mat-icon> Ajouter
+  </button>
+</header>
+
+<mat-menu #addEvent="matMenu">
+  <button mat-menu-item *ngIf="isPending()" (click)="cancelPendingElement()">Annuler l'ajout</button>
+  <button
+    class="btn-sub btn-sub-event"
+    mat-menu-item
+    (click)="addPendingElement('event')">
+    <span>·</span>Ajouter un événement
+  </button>
+  <button
+    class="btn-sub btn-sub-free-vacation"
+    mat-menu-item
+    (click)="addPendingElement('free-vacation')">
+    <span>·</span>Ajouter un congé payé
+  </button>
+  <button
+    class="btn-sub btn-sub-unpaid-leave"
+    mat-menu-item
+    (click)="addPendingElement('unpaid-leave')">
+    <span>·</span>Ajouter un congé sans solde
+  </button>
+</mat-menu>

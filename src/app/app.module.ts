@@ -7,13 +7,15 @@ import {AppComponent} from './app.component';
 import {AppRoutingModule} from './app-routing.module';
 import {MainNavigationComponent} from '@/components/navigation';
 import {MatButtonModule} from '@angular/material/button';
+import {MatMenuModule} from '@angular/material/menu';
 import {DayPipe, MonthPipe, YearPipe} from '@/pipes';
 import {
-  CalendarComponent,
+  CalendarComponent, CalendarSidebarComponent,
   CalendarSmallFormComponent,
   PageCalendarComponent,
   PageCalendarSubNavComponent
 } from '@/components/page-calendar';
+import { CalendarDayComponent } from './components/page-calendar/calendar-day/calendar-day.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,9 @@ import {
     YearPipe,
     CalendarComponent,
     DayPipe,
-    CalendarSmallFormComponent
+    CalendarSmallFormComponent,
+    CalendarDayComponent,
+    CalendarSidebarComponent
   ],
   imports: [
     AppRoutingModule,
@@ -34,6 +38,7 @@ import {
     MatButtonModule,
     MatDividerModule,
     MatIconModule,
+    MatMenuModule,
     MatSidenavModule,
     MatToolbarModule,
   ],

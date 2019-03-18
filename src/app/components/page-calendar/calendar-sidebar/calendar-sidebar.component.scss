@@ -1,0 +1,17 @@
+@import './colors';
+
+:host { padding: 40px; }
+header { text-align: center; }
+.btn-add {
+  border-radius: 1.5em;
+  font-size: 2em;
+}
+.btn-sub {
+  span {
+    display: inline-block; margin-right: 10px;
+    font-size: 5em; font-weight: bold; line-height: 0; vertical-align: middle;
+  }
+  &-event span { color: $color-event; }
+  &-unpaid-leave span { color: $color-unpaid-leave; }
+  &-free-vacation span { color: $color-free-vacation; }
+}

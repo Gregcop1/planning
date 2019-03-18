@@ -1,8 +1,9 @@
 import {Dayjs} from 'dayjs';
+import {Event} from '@/interfaces/Event';
 
 export interface Day {
   day: Dayjs;
-  event?: any[];
+  events?: Event[];
 }
 
 export interface Week {

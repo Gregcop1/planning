@@ -16,30 +16,39 @@ table {
   tr { vertical-align: top; }
   tr:last-child td { border-bottom: 0; }
   td, th {
-    padding: 10px; border: 1px solid $color-brown-lighter;
+    border: 1px solid $color-brown-lighter;
     font-family: "Roboto", "Helvetica Neue", sans-serif; font-size: 1.2em;
     user-select: none;
   }
-  th { color: $color-grey }
-  td { position: relative; height: 100px; z-index: 1; }
+  th { padding: 10px; color: $color-grey }
+  td { position: relative; padding: 10px 5px; height: 100px; z-index: 1; }
   td:first-child { border-left: 0; }
   td:last-child { border-right: 0; }
 
   .week { width: 15px; }
   .form { height: auto; }
   .siblings-month { background-color: $color-grey-lightest; }
-  .day-number {
-    position: absolute; bottom: 0; right: 0;
-    font-size: 4em; font-weight: bold; line-height: 1; color: $color-grey-lighter; text-align: right;
-  }
+
+  td.selection-start ul,
+  td.selection-end ul,
+  td.selection-in ul { display: none; }
 
   td.selection-start,
-  td.selection-in,
   td.selection-end,
-  td.selection-start.selection-in, td.selection-start.selection-end { border: 2px solid $color-free-vacation; }
-  td.selection-start { border-right: 0; }
-  td.selection-in { border-left: 0; border-right: 0; }
-  td.selection-end { border-left: 0; }
-
-  td:hover .day-number { color: $color-brown-lighter; }
+  td.selection-in {
+    &.selection-event { border-color: $color-event; }
+    &.selection-free-vacation { border-color: $color-free-vacation; }
+    &.selection-unpaid-leave { border-color: $color-unpaid-leave; }
+  }
+  td.selection-start,
+  td.selection-end {
+    &.selection-event { background: darken($color-event, 10%); }
+    &.selection-free-vacation { background: darken($color-free-vacation, 10%); }
+    &.selection-unpaid-leave { background: darken($color-unpaid-leave, 10%); }
+  }
+  td.selection-in {
+    &.selection-event { background: $color-event; }
+    &.selection-free-vacation { background: $color-free-vacation; }
+    &.selection-unpaid-leave { background: $color-unpaid-leave; }
+  }
 }

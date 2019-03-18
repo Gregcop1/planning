@@ -1,0 +1,8 @@
+<ng-container>
+  <span class="day-number">{{ day.day|day }}</span>
+  <ul *ngIf="day.events.length">
+    <li *ngFor="let event of day.events" class="type-{{event.type}}">
+      {{event.label}}
+    </li>
+  </ul>
+</ng-container>

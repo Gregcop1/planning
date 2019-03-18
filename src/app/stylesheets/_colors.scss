@@ -9,13 +9,13 @@ $color-grey-lighter: lighten($color-grey, 70);
 $color-grey-light: lighten($color-grey, 50);
 $color-brown: #5d4037;
 $color-brown-lighter: lighten($color-brown, 60);
-$color-blue: #345aff;
+$color-blue: #6489ff;
 $color-blue-ligther: lighten($color-blue, 30);
-$color-green: #81ff71;
+$color-green: #55a355;
 
-$color-unpaid-leave: $color-red-darkest;
+$color-unpaid-leave: $color-blue;
 $color-free-vacation: $color-red-light;
-$color-general-meeting: $color-green;
+$color-event: $color-green;
 
 
 // Material theme

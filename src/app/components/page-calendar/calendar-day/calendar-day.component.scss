@@ -1,0 +1,18 @@
+@import "./colors";
+
+.day-number {
+  position: absolute; bottom: 0; right: 0;
+  font-size: 4em; font-weight: bold; line-height: 1; color: $color-grey-lighter; text-align: right;
+}
+:host:hover .day-number { color: $color-brown-lighter; }
+
+ul { margin: 0; padding: 0; list-style-type: none; }
+li {
+  border-radius: 2px; padding: 3px 5px;
+  color: $color-white;
+
+  &.type-unpaid-leave { background-color: $color-unpaid-leave; }
+  &.type-free-vacation { background-color: $color-free-vacation; }
+  &.type-event { background-color: $color-event; }
+  + li { margin-top: 2px; }
+}
