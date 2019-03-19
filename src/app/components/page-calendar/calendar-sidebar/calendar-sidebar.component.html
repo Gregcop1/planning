@@ -3,6 +3,31 @@
     <mat-icon class="md-48">add</mat-icon> Ajouter
   </button>
 </header>
+<mat-divider></mat-divider>
+<mat-accordion>
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      Filtrer par personne :
+    </mat-expansion-panel-header>
+    <mat-list>
+      <mat-list-item><mat-checkbox>Tous les utilisateurs</mat-checkbox></mat-list-item>
+      <mat-list-item><mat-checkbox>Moi uniquement</mat-checkbox></mat-list-item>
+      <mat-list-item><mat-checkbox>Olivier Lenancker</mat-checkbox></mat-list-item>
+      <mat-list-item><mat-checkbox>Kevin Dunglas</mat-checkbox></mat-list-item>
+    </mat-list>
+  </mat-expansion-panel>
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      Filtrer par type :
+    </mat-expansion-panel-header>
+    <mat-list>
+      <mat-list-item><mat-checkbox>Tous les types</mat-checkbox></mat-list-item>
+      <mat-list-item><mat-checkbox class="type-event">Événements</mat-checkbox></mat-list-item>
+      <mat-list-item><mat-checkbox class="type-free-vacation">Congés payés</mat-checkbox></mat-list-item>
+      <mat-list-item><mat-checkbox class="type-unpaid-leave">Congés sans solde</mat-checkbox></mat-list-item>
+    </mat-list>
+  </mat-expansion-panel>
+</mat-accordion>
 
 <mat-menu #addEvent="matMenu">
   <button mat-menu-item *ngIf="isPending()" (click)="cancelPendingElement()">Annuler l'ajout</button>

@@ -1,10 +1,13 @@
 @import './colors';
 
-:host { padding: 40px; }
-header { text-align: center; }
-.btn-add {
-  border-radius: 1.5em;
-  font-size: 2em;
+header {
+  margin: 40px;
+  text-align: center;
+
+  .btn-add {
+    border-radius: 1.5em;
+    font-size: 2em;
+  }
 }
 .btn-sub {
   span {
@@ -14,4 +17,10 @@ header { text-align: center; }
   &-event span { color: $color-event; }
   &-unpaid-leave span { color: $color-unpaid-leave; }
   &-free-vacation span { color: $color-free-vacation; }
+}
+.mat-divider {
+  margin: 20px;
+}
+mat-accordion {
+  display: block; margin: 20px;
 }

@@ -1,1 +1,16 @@
 .empty-space { flex: 1 1 auto; }
+
+mat-accordion {
+  .type-event {
+    .mat-checkbox-frame { border-color: $color-event; }
+    &.mat-checkbox-checked.mat-accent .mat-checkbox-background { background-color: $color-event; }
+  }
+  .type-free-vacation {
+    .mat-checkbox-frame { border-color: $color-free-vacation; }
+    &.mat-checkbox-checked.mat-accent .mat-checkbox-background { background-color: $color-free-vacation; }
+  }
+  .type-unpaid-leave {
+    .mat-checkbox-frame { border-color: $color-unpaid-leave; }
+    &.mat-checkbox-checked.mat-accent .mat-checkbox-background { background-color: $color-unpaid-leave; }
+  }
+}

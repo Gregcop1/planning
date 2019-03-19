@@ -1,13 +1,21 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {MatDividerModule, MatIconModule, MatSidenavModule, MatToolbarModule} from '@angular/material';
+import {
+  MatButtonModule,
+  MatCheckboxModule,
+  MatDividerModule,
+  MatExpansionModule,
+  MatIconModule,
+  MatListModule,
+  MatMenuModule,
+  MatSidenavModule,
+  MatToolbarModule
+} from '@angular/material';
 
 import {AppComponent} from './app.component';
 import {AppRoutingModule} from './app-routing.module';
 import {MainNavigationComponent} from '@/components/navigation';
-import {MatButtonModule} from '@angular/material/button';
-import {MatMenuModule} from '@angular/material/menu';
 import {DayPipe, MonthPipe, YearPipe} from '@/pipes';
 import {
   CalendarComponent, CalendarSidebarComponent,
@@ -36,8 +44,11 @@ import { CalendarDayComponent } from './components/page-calendar/calendar-day/ca
     BrowserModule,
     BrowserAnimationsModule,
     MatButtonModule,
+    MatCheckboxModule,
     MatDividerModule,
+    MatExpansionModule,
     MatIconModule,
+    MatListModule,
     MatMenuModule,
     MatSidenavModule,
     MatToolbarModule,
