@@ -24,6 +24,7 @@ import {
   PageCalendarSubNavComponent
 } from '@/components/page-calendar';
 import { CalendarDayComponent } from './components/page-calendar/calendar-day/calendar-day.component';
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -43,6 +44,7 @@ import { CalendarDayComponent } from './components/page-calendar/calendar-day/ca
     AppRoutingModule,
     BrowserModule,
     BrowserAnimationsModule,
+    FormsModule,
     MatButtonModule,
     MatCheckboxModule,
     MatDividerModule,

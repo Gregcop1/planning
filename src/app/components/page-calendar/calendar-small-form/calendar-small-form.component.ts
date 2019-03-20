@@ -13,6 +13,7 @@ import {EventService} from '@/services/event.service';
       (keyup.escape)="cancel()"
       type="text"
       placeholder="Donnez un nom à votre événement"
+      [(ngModel)]="value"
       name="label"
     />`,
   styleUrls: ['./calendar-small-form.component.scss']
@@ -22,19 +23,29 @@ export class CalendarSmallFormComponent implements OnInit {
   @HostBinding('class.form') classOverride = true;
   @ViewChild('field') private field;
   public displayed = false;
+  public value = '';
 
   constructor(private eventService: EventService) {}
 
   ngOnInit() {
-    (this.field.nativeElement as HTMLTextAreaElement).focus();
     this.displayed = true;
     this.eventService.$pendingEvent.subscribe(event => {
-      this.selectionType = event ? `form-type-${event.type}` : '';
+      if (event) {
+        this.selectionType = `form-type-${event.type}`;
+        switch (event.type) {
+          case EventType.UnpaidLeave: this.value = 'Sans solde Grégory Copin';
+            break;
+          case EventType.FreeVacation: this.value = 'Congé Grégory Copin';
+            break;
+          default: this.value = '';
+        }
+        (this.field.nativeElement as HTMLTextAreaElement).focus();
+      }
     });
   }
 
   submit(): void {
-    this.eventService.submitEvent(this.field.nativeElement.value);
+    this.eventService.submitEvent(this.value);
   }
 
   cancel(): void {

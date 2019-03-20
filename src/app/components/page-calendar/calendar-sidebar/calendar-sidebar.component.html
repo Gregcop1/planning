@@ -38,6 +38,12 @@
     <span>·</span>Ajouter un événement
   </button>
   <button
+    class="btn-sub btn-sub-blocking-event"
+    mat-menu-item
+    (click)="addPendingElement('blocking-event')">
+    <span>·</span>Ajouter un événement bloquant
+  </button>
+  <button
     class="btn-sub btn-sub-free-vacation"
     mat-menu-item
     (click)="addPendingElement('free-vacation')">

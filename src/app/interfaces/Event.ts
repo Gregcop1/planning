@@ -3,6 +3,7 @@ import {Dayjs} from 'dayjs';
 export enum EventType {
   UnpaidLeave = 'unpaid-leave',
   FreeVacation = 'free-vacation',
+  BlockingEvent = 'blocking-event',
   Event = 'event',
 }
 

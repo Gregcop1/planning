@@ -17,9 +17,16 @@ export class EventService {
       {
         author: 'gregory.copin',
         label: 'AG des Tilleuls',
-        type: EventType.Event,
+        type: EventType.BlockingEvent,
         startDate: dayjs().subtract(3, 'day'),
         endDate: dayjs().subtract(3, 'day'),
+      },
+      {
+        author: 'gregory.copin',
+        label: 'SF Live Lille',
+        type: EventType.Event,
+        startDate: dayjs().subtract(10, 'day'),
+        endDate: dayjs().subtract(8, 'day'),
       },
       {
         author: 'gregory.copin',

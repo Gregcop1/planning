@@ -13,6 +13,7 @@ li {
 
   &.type-unpaid-leave { background-color: $color-unpaid-leave; }
   &.type-free-vacation { background-color: $color-free-vacation; }
+  &.type-blocking-event { background-color: $color-blocking-event; }
   &.type-event { background-color: $color-event; }
   + li { margin-top: 2px; }
 }

@@ -4,6 +4,7 @@
   padding: 10px;
 
   &.form-type-event { background: $color-event; }
+  &.form-type-blocking-event { background: $color-blocking-event; }
   &.form-type-unpaid-leave { background: $color-unpaid-leave; }
   &.form-type-free-vacation { background: $color-free-vacation; }
 }

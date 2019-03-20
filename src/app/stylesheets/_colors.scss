@@ -12,10 +12,12 @@ $color-brown-lighter: lighten($color-brown, 60);
 $color-blue: #6489ff;
 $color-blue-ligther: lighten($color-blue, 30);
 $color-green: #55a355;
+$color-purple: #9e39ca;
 
 $color-unpaid-leave: $color-blue;
 $color-free-vacation: $color-red-light;
 $color-event: $color-green;
+$color-blocking-event: $color-purple;
 
 
 // Material theme

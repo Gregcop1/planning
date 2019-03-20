@@ -37,17 +37,20 @@ table {
   td.selection-end,
   td.selection-in {
     &.selection-event { border-color: $color-event; }
+    &.selection-blocking-event { border-color: $color-blocking-event; }
     &.selection-free-vacation { border-color: $color-free-vacation; }
     &.selection-unpaid-leave { border-color: $color-unpaid-leave; }
   }
   td.selection-start,
   td.selection-end {
     &.selection-event { background: darken($color-event, 10%); }
+    &.selection-blocking-event { background: darken($color-blocking-event, 10%); }
     &.selection-free-vacation { background: darken($color-free-vacation, 10%); }
     &.selection-unpaid-leave { background: darken($color-unpaid-leave, 10%); }
   }
   td.selection-in {
     &.selection-event { background: $color-event; }
+    &.selection-blocking-event { background: $color-blocking-event; }
     &.selection-free-vacation { background: $color-free-vacation; }
     &.selection-unpaid-leave { background: $color-unpaid-leave; }
   }
